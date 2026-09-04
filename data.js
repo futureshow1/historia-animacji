@@ -904,6 +904,7 @@ window.FILMS = [
   "year": 1928,
   "url": "https://www.youtube.com/watch?v=AtTTmX9Y-Ic",
   "id": "AtTTmX9Y-Ic",
+  "thumb": "img/steamboat-willie-1928.jpg",
   "duration": "7:23",
   "duration_seconds": 443,
   "views": 550192,
