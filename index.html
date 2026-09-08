@@ -505,6 +505,11 @@
     border-bottom: 1px solid var(--acc);
   }
   .modal-meta a:hover { color: #f3efe6; }
+  .m-share {
+    font: inherit; color: #b8b2a6; background: none; border: none;
+    border-bottom: 1px solid var(--acc); padding: 0; cursor: pointer;
+  }
+  .m-share:hover { color: #f3efe6; }
   .close {
     position: fixed;
     top: 1.2rem; right: 1.6rem;
@@ -720,6 +725,7 @@ const I18N = {
     navLabel: "Rozdziały",
     views: "wyśw.", viewsLong: "wyświetleń", channel: "kanał",
     open: "otwórz na YouTube ↗",
+    share: "kopiuj link do filmu", shared: "skopiowano ✓",
     noembed: "Film bez zgody na osadzanie — obejrzyj na YouTube ↗",
     badgeFrag: "Fragment", badgeDoc: "Dokument",
     empty: "Brak wyników dla tego zapytania.",
@@ -738,6 +744,7 @@ const I18N = {
     navLabel: "Chapters",
     views: "views", viewsLong: "views", channel: "channel",
     open: "open on YouTube ↗",
+    share: "copy link to film", shared: "copied ✓",
     noembed: "Embedding disabled — watch on YouTube ↗",
     badgeFrag: "Fragment", badgeDoc: "Documentary",
     empty: "No results for this query.",
@@ -875,16 +882,38 @@ function openModal(f) {
       ${f.views ? `<span>${fmtViews(f.views)} ${T().viewsLong}</span>` : ''}
       ${f.channel ? `<span>${T().channel}: ${f.channel}</span>` : ''}
       <a href="${f.url}" target="_blank" rel="noopener">${f.source === 'vimeo' ? T().open.replace('YouTube', 'Vimeo') : T().open}</a>
+      <button class="m-share" id="mShare">🔗 ${T().share}</button>
     </div>`;
+  document.getElementById('mShare').addEventListener('click', function () {
+    const link = location.origin + location.pathname + '#film=' + f.id;
+    const btn = this;
+    const ok = () => { btn.textContent = '✓ ' + T().shared; setTimeout(() => { btn.textContent = '🔗 ' + T().share; }, 2000); };
+    if (navigator.clipboard) navigator.clipboard.writeText(link).then(ok, () => prompt(T().share, link));
+    else prompt(T().share, link);
+  });
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
+  try { history.replaceState(null, '', '#film=' + f.id); } catch (e) {}
 }
 
 function closeModal() {
   document.getElementById('modal').classList.remove('open');
   document.getElementById('player').innerHTML = '';
   document.body.style.overflow = '';
+  if (location.hash.indexOf('#film=') === 0) {
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  }
 }
+
+/* ---- udostępnianie: #film=<id> otwiera konkretny film ---- */
+function openFromHash() {
+  const h = location.hash;
+  if (h.indexOf('#film=') !== 0) return;
+  const id = decodeURIComponent(h.slice(6));
+  const f = films.find(x => x.id === id);
+  if (f) openModal(f);
+}
+addEventListener('hashchange', openFromHash);
 
 // ---- scroll spy ----
 function updateSpy() {
@@ -997,6 +1026,7 @@ document.getElementById('stat-films').textContent = films.length;
 document.getElementById('stat-artists').textContent = new Set(films.map(f => f.artist)).size;
 document.getElementById('stat-chapters').textContent = new Set(films.map(f => f.section)).size;
 applyI18n();
+openFromHash();
 </script>
 </body>
 </html>
