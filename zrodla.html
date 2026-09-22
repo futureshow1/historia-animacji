@@ -49,6 +49,7 @@
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"></head>
 <body>
+<script>try{if((localStorage.getItem("ha-motyw")||"light")==="light")document.body.classList.add("light")}catch(e){document.body.classList.add("light")}</script>
 <div class="wrap">
   <div class="top">
     <a class="back" href="index.html">← HISTORIA ANIMACJI</a>
@@ -148,7 +149,7 @@
 
 <script>
 let lang = localStorage.getItem('ha-lang') || 'pl';
-let theme = localStorage.getItem('ha-theme') || 'dark';
+let theme = localStorage.getItem('ha-motyw') || 'light';
 function apply() {
   document.body.classList.toggle('light', theme === 'light');
   document.querySelectorAll('[data-lang]').forEach(el => { el.hidden = el.dataset.lang !== lang; });
@@ -157,7 +158,7 @@ function apply() {
   document.querySelector('.back').textContent = lang === 'pl' ? '← HISTORIA ANIMACJI' : '← ANIMATION HISTORY';
 }
 document.getElementById('langBtn').onclick = () => { lang = lang === 'pl' ? 'en' : 'pl'; localStorage.setItem('ha-lang', lang); apply(); };
-document.getElementById('themeBtn').onclick = () => { theme = theme === 'dark' ? 'light' : 'dark'; localStorage.setItem('ha-theme', theme); apply(); };
+document.getElementById('themeBtn').onclick = () => { theme = theme === 'dark' ? 'light' : 'dark'; localStorage.setItem('ha-motyw', theme); apply(); };
 apply();
 </script>
 <script data-goatcounter="https://futureshow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

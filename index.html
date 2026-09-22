@@ -572,6 +572,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="canonical" href="https://futureshow.pl/historia-animacji/">
 </head>
 <body>
+<script>try{if((localStorage.getItem("ha-motyw")||"light")==="light")document.body.classList.add("light")}catch(e){document.body.classList.add("light")}</script>
 
 <header>
   <div class="kicker" data-i18n="kicker"></div>
@@ -812,7 +813,7 @@ const films = (window.FILMS || []).filter(f => f && f.id);
 let typeFilter = 'all';
 let query = '';
 let lang = localStorage.getItem('ha-lang') || 'pl';
-let theme = localStorage.getItem('ha-theme') || 'dark';
+let theme = localStorage.getItem('ha-motyw') || 'light';
 
 const T = () => I18N[lang];
 const S = sec => SECTIONS.find(s => s.pl === sec);
@@ -1029,7 +1030,7 @@ document.querySelectorAll('.fbtn').forEach(b => b.addEventListener('click', () =
 document.getElementById('toTop').addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 document.getElementById('themeBtn').addEventListener('click', () => {
   theme = theme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('ha-theme', theme);
+  localStorage.setItem('ha-motyw', theme);
   document.body.classList.toggle('light', theme === 'light');
 });
 document.getElementById('langBtn').addEventListener('click', () => {
