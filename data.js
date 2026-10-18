@@ -1,4 +1,4 @@
-// Wygenerowane 2026-07-31 przez tools/build_data.py — 430 filmów, 30 rozdziałów.
+// Wygenerowane 2026-07-31 przez tools/build_data.py — 427 filmów, 30 rozdziałów.
 window.FILMS = [
  {
   "section": "Prehistoria ruchomych obrazów",
@@ -1247,20 +1247,6 @@ window.FILMS = [
   "channel": "Marisela Brambila",
   "thumbnail": "https://i.ytimg.com/vi/itJgEwHNYDI/hqdefault.jpg",
   "type": "fragment"
- },
- {
-  "section": "Looney Tunes i MGM: złota era kreskówki",
-  "artist": "Chuck Jones",
-  "film": "Duck Amuck",
-  "year": 1953,
-  "url": "https://www.youtube.com/watch?v=6QZDeDsadDs",
-  "id": "6QZDeDsadDs",
-  "duration": "7:00",
-  "duration_seconds": 420,
-  "views": 207505,
-  "channel": "Jose Rafael Leon",
-  "thumbnail": "https://i.ytimg.com/vi/6QZDeDsadDs/hqdefault.jpg",
-  "type": "full"
  },
  {
   "section": "Looney Tunes i MGM: złota era kreskówki",
@@ -3651,13 +3637,13 @@ window.FILMS = [
   "artist": "Tomasz Bagiński",
   "film": "Sztuka spadania",
   "year": 2004,
-  "url": "https://www.youtube.com/watch?v=j9bBmU-2YN4",
-  "id": "j9bBmU-2YN4",
-  "duration": "6:01",
-  "duration_seconds": 361,
-  "views": 36181,
-  "channel": "E K",
-  "thumbnail": "https://i.ytimg.com/vi/j9bBmU-2YN4/hqdefault.jpg",
+  "url": "https://www.youtube.com/watch?v=bVfNOoFmHqQ",
+  "id": "bVfNOoFmHqQ",
+  "duration": "6:00",
+  "duration_seconds": 360,
+  "views": 2971,
+  "channel": "dem edu",
+  "thumbnail": "https://i.ytimg.com/vi/bVfNOoFmHqQ/hqdefault.jpg",
   "type": "full"
  },
  {
@@ -4167,20 +4153,6 @@ window.FILMS = [
  },
  {
   "section": "Japonia II: anime — od Ghibli do dziś",
-  "artist": "Hayao Miyazaki",
-  "film": "On Your Mark",
-  "year": 1995,
-  "url": "https://www.youtube.com/watch?v=BmbPdyfREYU",
-  "id": "BmbPdyfREYU",
-  "duration": "2:21",
-  "duration_seconds": 141,
-  "views": 240485,
-  "channel": "Redah",
-  "thumbnail": "https://i.ytimg.com/vi/BmbPdyfREYU/hqdefault.jpg",
-  "type": "fragment"
- },
- {
-  "section": "Japonia II: anime — od Ghibli do dziś",
   "artist": "Hideaki Anno",
   "film": "Neon Genesis Evangelion (czołówka)",
   "year": 1995,
@@ -4206,6 +4178,22 @@ window.FILMS = [
   "channel": "HD Retro Trailers",
   "thumbnail": "https://i.ytimg.com/vi/rU6Matng9MU/hqdefault.jpg",
   "type": "fragment"
+ },
+ {
+  "section": "Japonia II: anime — od Ghibli do dziś",
+  "artist": "Hayao Miyazaki",
+  "film": "On Your Mark",
+  "year": 1995,
+  "url": "https://vimeo.com/394801904",
+  "id": "394801904",
+  "duration": "6:45",
+  "duration_seconds": 405,
+  "views": 0,
+  "channel": "Vimeo",
+  "thumbnail": "https://i.vimeocdn.com/video/860822563-046b4d0d5485f2bca974e192cdcf01b7a093217b7cfe8312fe62171ed18e9d74-d_295x166?region=us",
+  "type": "full",
+  "source": "vimeo",
+  "note": "Teledysk dla duetu Chage & Aska, jedyna reżyseria Miyazakiego poza Ghibli w latach 90."
  },
  {
   "section": "Japonia II: anime — od Ghibli do dziś",
@@ -4531,20 +4519,6 @@ window.FILMS = [
  },
  {
   "section": "Estonia, Węgry i inne szkoły Wschodu",
-  "artist": "Elbert Tuganov",
-  "film": "Peetrikese unenägu",
-  "year": 1958,
-  "url": "https://www.youtube.com/watch?v=dOKzLbtBIho",
-  "id": "dOKzLbtBIho",
-  "duration": "18:34",
-  "duration_seconds": 1114,
-  "views": 58,
-  "channel": "Family relax",
-  "thumbnail": "https://i.ytimg.com/vi/dOKzLbtBIho/hqdefault.jpg",
-  "type": "full"
- },
- {
-  "section": "Estonia, Węgry i inne szkoły Wschodu",
   "artist": "Todor Dinov",
   "film": "Margaritka",
   "year": 1965,
@@ -4632,14 +4606,14 @@ window.FILMS = [
   "artist": "Rein Raamat",
   "film": "Suur Tõll",
   "year": 1980,
-  "url": "https://www.youtube.com/watch?v=8esU24qPTKw",
-  "id": "8esU24qPTKw",
-  "duration": "14:14",
-  "duration_seconds": 854,
-  "views": 27907,
-  "channel": "Bon (ok)",
-  "thumbnail": "https://i.ytimg.com/vi/8esU24qPTKw/hqdefault.jpg",
-  "type": "full"
+  "url": "https://www.youtube.com/watch?v=f9sjd5tlsVY",
+  "id": "f9sjd5tlsVY",
+  "duration": "3:42",
+  "duration_seconds": 222,
+  "views": 101,
+  "channel": "Flavour of the Earth",
+  "thumbnail": "https://i.ytimg.com/vi/f9sjd5tlsVY/hqdefault.jpg",
+  "type": "fragment"
  },
  {
   "section": "Estonia, Węgry i inne szkoły Wschodu",
@@ -4667,20 +4641,6 @@ window.FILMS = [
   "views": 9910,
   "channel": "sentimental corpse",
   "thumbnail": "https://i.ytimg.com/vi/Z6Xzu7BOdh4/hqdefault.jpg",
-  "type": "full"
- },
- {
-  "section": "Estonia, Węgry i inne szkoły Wschodu",
-  "artist": "Rein Raamat",
-  "film": "Põrgu",
-  "year": 1983,
-  "url": "https://www.youtube.com/watch?v=zNgwy-JzsLI",
-  "id": "zNgwy-JzsLI",
-  "duration": "17:03",
-  "duration_seconds": 1023,
-  "views": 11839,
-  "channel": "Bad Robot",
-  "thumbnail": "https://i.ytimg.com/vi/zNgwy-JzsLI/hqdefault.jpg",
   "type": "full"
  },
  {
